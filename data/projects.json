@@ -1,0 +1,58 @@
+[
+  {
+    "id": "default-0",
+    "title": "Ciremai Hiking Guide",
+    "category": "DESAIN UI/UX",
+    "status": "Konsep",
+    "description": "Rancangan aplikasi yang memuat informasi jalur dan persiapan pendakian.",
+    "tags": [
+      "Figma",
+      "User Flow",
+      "Wireframe"
+    ],
+    "templateIndex": 0,
+    "image": null,
+    "imagePositionX": 50,
+    "imagePositionY": 50
+  },
+  {
+    "id": "default-2",
+    "title": "ML Prediction Playground",
+    "category": "MACHINE LEARNING",
+    "status": "Rencana belajar",
+    "description": "Latihan untuk mempelajari pengolahan data dan dasar model prediksi.",
+    "tags": [
+      "Python",
+      "Dataset",
+      "Model Prediksi"
+    ],
+    "templateIndex": 2,
+    "image": null,
+    "imagePositionX": 50,
+    "imagePositionY": 50
+  },
+  {
+    "title": "anu",
+    "category": "WEB DEVELOPMENT",
+    "description": "gatau",
+    "tags": [],
+    "image": null,
+    "imagePositionX": 50,
+    "imagePositionY": 50,
+    "id": "3ef31b51-8d8d-4db1-93df-4c9a53717b8b",
+    "status": "Proyek pribadi",
+    "templateIndex": null
+  },
+  {
+    "title": "hihu",
+    "category": "WEB DEVELOPMENT",
+    "description": "anu",
+    "tags": [],
+    "image": null,
+    "imagePositionX": 50,
+    "imagePositionY": 50,
+    "id": "542933df-f041-4f28-ab4e-35885ea84b80",
+    "status": "Proyek pribadi",
+    "templateIndex": null
+  }
+]

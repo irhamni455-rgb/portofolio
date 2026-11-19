@@ -1,0 +1,12 @@
+{
+  "name": "irhamni-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "multer": "^2.5.0",
+    "mysql2": "^3.24.6"
+  }
+}

@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portofolio Muhammad Irhamni, mahasiswa Teknik Informatika di Universitas Muhammadiyah Cirebon.">
+  <title>Muhammad Irhamni — Portofolio pribadi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda" aria-label="Muhammad Irhamni, kembali ke awal">
+        <span class="brand-mark">MI</span>
+      </a>
+      <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span></button>
+      <div class="nav-links" id="primary-navigation">
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#proyek">Karya</a>
+        <a href="#academic-hub">Academic Hub</a>
+        <a href="#arsip">Arsip</a>
+        <a class="nav-contact" href="#kontak">Kontak</a>
+      </div>
+      <button class="theme-toggle" type="button" aria-label="Aktifkan mode gelap" aria-pressed="false">Mode gelap</button>
+    </nav>
+  </header>
+
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <main>
+    <section class="hero container" id="beranda" aria-label="Portofolio Muhammad Irhamni">
+      <div class="hero-composition">
+        <div class="hero-copy">
+            <p class="hero-name"> Muhammad Irhamni</p>
+            <h1><span class="hero-line"> Mahasiswa</span><span class="hero-line">Teknik Informatika.</span></h1>
+            <p class="hero-description"> Saya sedang belajar mengembangkan website, membuat aplikasi, dan memahami pengolahan data melalui berbagai project dan tugas perkuliahan.</p>
+            <div class="hero-actions">
+            <a class="hero-cta" href="#proyek">Lihat Karya</a>
+            <a class="hero-cta hero-cta-secondary" href="#academic-hub">Academic Hub</a>
+          </div>
+        </div>
+        <aside class="hero-education" aria-label="Pendidikan dan lokasi">
+          <p class="hero-education-label">Saat ini</p>
+          <p class="hero-education-program">Teknik Informatika</p>
+          <p>Universitas Muhammadiyah Cirebon</p>
+          <p>Cirebon, Indonesia</p>
+          <a href="#tentang">Tentang saya <span aria-hidden="true">↘</span></a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="proyek">
+      <div class="container">
+        <div class="section-heading-row"><h2>Karya</h2><p class="section-intro">Beberapa proyek dan latihan yang saya kerjakan selama belajar.</p></div>
+        <div class="project-filters" role="group" aria-label="Filter karya">
+          <button type="button" data-project-filter="all" aria-pressed="true">Semua</button>
+          <button type="button" data-project-filter="web development" aria-pressed="false">Web Development</button>
+          <button type="button" data-project-filter="ui/ux design" aria-pressed="false">UI/UX Design</button>
+          <button type="button" data-project-filter="programming" aria-pressed="false">Programming</button>
+          <button type="button" data-project-filter="database" aria-pressed="false">Database</button>
+          <button type="button" data-project-filter="machine learning" aria-pressed="false">Machine Learning</button>
+        </div>
+        <p class="project-filter-empty" id="project-filter-empty" role="status" hidden>Belum ada proyek pada kategori ini.</p>
+        <p class="project-load-status" id="project-load-status" role="status" aria-live="polite">Memuat proyek...</p>
+        <div class="project-grid">
+          <article class="project-card" hidden>
+            <div class="project-art"><span class="project-image-placeholder">Foto belum ditambahkan</span></div>
+            <div class="project-meta"><span>Desain UI/UX</span></div>
+            <h3>Ciremai Hiking Guide</h3>
+            <p>Rancangan aplikasi yang memuat informasi jalur dan persiapan pendakian.</p>
+          </article>
+          <article class="project-card" hidden>
+            <div class="project-art"><span class="project-image-placeholder">Foto belum ditambahkan</span></div>
+            <div class="project-meta"><span>Pengembangan web</span></div>
+            <h3>Sistem Pelaporan Fasilitas</h3>
+            <p>Rancangan aplikasi untuk melaporkan kerusakan fasilitas kampus.</p>
+          </article>
+          <article class="project-card" hidden>
+            <div class="project-art"><span class="project-image-placeholder">Foto belum ditambahkan</span></div>
+            <div class="project-meta"><span>Machine learning</span></div>
+            <h3>ML Prediction Playground</h3>
+            <p>Latihan untuk mempelajari pengolahan data dan dasar model prediksi.</p>
+          </article>
+        </div>
+        <div class="project-manager">
+          <div class="project-manager-heading">
+            <h3>Kelola proyek</h3>
+            <p>Masuk admin untuk menambah, mengubah, atau menghapus proyek. Perubahan disimpan di server.</p>
+          </div>
+          <form class="project-login" id="project-login-form">
+            <label for="project-admin-password">Kata sandi admin
+              <input id="project-admin-password" name="password" type="password" minlength="12" autocomplete="current-password" required>
+            </label>
+            <button type="submit">Masuk admin</button>
+            <button class="project-logout" type="button" hidden>Keluar</button>
+          </form>
+          <form class="project-form" id="project-form" hidden>
+            <label>Nama proyek
+              <input name="title" type="text" maxlength="80" required>
+            </label>
+            <label>Kategori
+              <input name="category" type="text" maxlength="40" placeholder="Contoh: UI/UX Design" required>
+            </label>
+            <label class="project-form-wide">Deskripsi
+              <textarea name="description" rows="3" maxlength="300" required></textarea>
+            </label>
+            <label class="project-form-wide">Tujuan proyek <span>opsional</span>
+              <textarea name="purpose" rows="2" maxlength="500"></textarea>
+            </label>
+            <label class="project-form-wide">Dokumentasi <span>tautan opsional</span>
+              <input name="documentationUrl" type="url" maxlength="2048" placeholder="https://...">
+            </label>
+            <label class="project-form-wide">Teknologi atau tag <span>(pisahkan dengan koma)</span>
+              <input name="tags" type="text" maxlength="120" placeholder="Contoh: Figma, Wireframe">
+            </label>
+            <label class="project-form-wide">Foto sampul <span>(JPG, PNG, atau WebP, maksimal 1 MB)</span>
+              <input name="image" type="file" accept="image/jpeg,image/png,image/webp">
+            </label>
+            <div class="project-image-editor project-form-wide" hidden>
+              <img class="project-image-preview" alt="Pratinjau foto sampul">
+              <label>Posisi horizontal
+                <input name="imagePositionX" type="range" min="0" max="100" value="50">
+              </label>
+              <label>Posisi vertikal
+                <input name="imagePositionY" type="range" min="0" max="100" value="50">
+              </label>
+              <label class="project-image-remove">
+                <span><input name="removeImage" type="checkbox"> Hapus foto sampul proyek</span>
+              </label>
+            </div>
+            <div class="project-form-actions project-form-wide">
+              <button class="project-submit" type="submit">Tambah proyek</button>
+              <button class="project-cancel" type="button" hidden>Batal</button>
+            </div>
+          </form>
+          <p class="project-message" id="project-message" role="status" aria-live="polite"></p>
+        </div>
+        <dialog class="project-detail-dialog" id="project-detail-dialog" aria-labelledby="project-detail-title">
+          <div class="project-detail-content">
+            <img class="project-detail-image" alt="" hidden>
+            <h2 id="project-detail-title"></h2>
+            <p class="project-detail-meta"></p>
+            <p class="project-detail-description"></p>
+            <section class="project-detail-purpose" aria-labelledby="project-detail-purpose-title" hidden>
+              <h3 id="project-detail-purpose-title">Tujuan proyek</h3>
+              <p></p>
+            </section>
+            <ul class="project-detail-tags" aria-label="Teknologi proyek" hidden></ul>
+            <a class="project-detail-documentation" href="#" target="_blank" rel="noopener noreferrer" hidden>Buka dokumentasi ↗</a>
+            <a class="project-detail-demo" href="#" target="_blank" rel="noopener noreferrer" hidden>Buka demo proyek ↗</a>
+            <button class="project-detail-close" type="button">Tutup</button>
+          </div>
+        </dialog>
+      </div>
+    </section>
+
+    <section class="section about-section" id="tentang">
+      <div class="container profile-layout">
+        <figure class="portrait-frame about-portrait-frame">
+          <img src="images/foto-sementara.jpg" alt="Foto profil sementara" loading="lazy" decoding="async">
+        </figure>
+        <div class="profile-content">
+          <p class="eyebrow">Tentang</p>
+          <h2>Tentang saya.</h2>
+          <div class="about-copy">
+            <p>Perkenalkan, saya Muhammad Irhamni, mahasiswa Teknik Informatika di Universitas Muhammadiyah Cirebon. Saat ini saya sedang mempelajari pengembangan web, pemrograman, UI/UX, dan machine learning.</p>
+            <p>Melalui portfolio ini, saya ingin menyimpan project yang pernah saya kerjakan serta tugas dan hasil pembelajaran selama kuliah.</p>
+          </div>
+          <div class="education-detail">
+            <strong>Teknik Informatika</strong>
+            <span>Universitas Muhammadiyah Cirebon</span>
+            <span>Cirebon, Indonesia</span>
+          </div>
+          <ul class="focus-list" aria-label="Bidang yang sedang dipelajari">
+            <li>Web Development</li>
+            <li>Programming</li>
+            <li>UI/UX Design</li>
+            <li>Data Science</li>
+            <li>Machine Learning</li>
+          </ul>
+          <div class="about-tools">
+            <h3>Teknologi dan metode pada proyek</h3>
+            <ul id="profile-project-tags" aria-live="polite">
+              <li>Memuat dari daftar proyek...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section archive-section" id="academic-hub">
+      <div class="container">
+        <div class="section-heading-row">
+          <h2>Academic Hub</h2>
+          <p class="section-intro">Semester 5 · Tahun Akademik 2026/2027</p>
+        </div>
+        <div class="archive-layout">
+          <section class="archive-content" aria-labelledby="archive-list-title">
+            <header class="archive-heading">
+              <h3 id="archive-list-title">Daftar tugas</h3>
+              <span class="archive-count" id="archive-count">Memuat tugas...</span>
+            </header>
+            <div class="archive-filters" aria-label="Cari dan filter tugas">
+              <label class="archive-search">Cari tugas
+                <input id="assignment-search" type="search" placeholder="Judul, mata kuliah, atau deskripsi">
+              </label>
+              <label>Mata kuliah
+                <select id="assignment-course-filter"><option value="">Semua mata kuliah</option></select>
+              </label>
+            </div>
+            <div class="archive-list" id="assignment-list" aria-live="polite"></div>
+            <div class="archive-admin">
+              <div class="archive-admin-heading">
+                <h3>Kelola tugas</h3>
+                <p>Tugas disimpan di database. File yang diunggah disimpan di server.</p>
+                <a class="archive-login-link" id="archive-login-link" href="#proyek">Masuk untuk mengelola tugas</a>
+              </div>
+              <form class="archive-form" id="assignment-form" hidden enctype="multipart/form-data">
+                <div class="archive-form-grid">
+                  <input name="semester" type="hidden" value="5">
+                  <label>Mata kuliah
+                    <input name="course" list="semester-five-course-options" maxlength="120" placeholder="Masukkan nama mata kuliah" required>
+                    <datalist id="semester-five-course-options"></datalist>
+                  </label>
+                  <label>Nama tugas
+                    <input name="title" type="text" maxlength="160" required>
+                  </label>
+                  <label>Kategori
+                    <select name="category" required>
+                      <option value="Tugas">Tugas</option>
+                      <option value="Praktikum">Praktikum</option>
+                      <option value="Proyek">Proyek</option>
+                      <option value="Ujian">Ujian</option>
+                      <option value="Catatan">Catatan</option>
+                    </select>
+                  </label>
+                  <label>Status
+                    <select name="status" required>
+                      <option value="Dalam proses">Dalam proses</option>
+                      <option value="Selesai">Selesai</option>
+                    </select>
+                  </label>
+                  <label>Tanggal pengumpulan
+                    <input name="dueDate" type="date">
+                  </label>
+                  <label>Tautan tugas <span>opsional jika melampirkan file</span>
+                    <input name="externalUrl" type="url" maxlength="2048" placeholder="https://...">
+                  </label>
+                  <label class="archive-link-field">Deskripsi
+                    <textarea name="description" rows="3" maxlength="1000" required></textarea>
+                  </label>
+                  <label class="archive-link-field">File tugas <span>opsional jika menyertakan tautan · PDF, Office, atau ZIP (maksimal 10 MB)</span>
+                    <input name="file" type="file" accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.zip">
+                  </label>
+                  <div class="archive-form-actions archive-link-field">
+                    <button class="archive-submit" type="submit">Simpan tugas</button>
+                    <button class="archive-cancel" type="button" hidden>Batal</button>
+                  </div>
+                </div>
+              </form>
+              <p class="archive-feedback" id="assignment-feedback" role="status" aria-live="polite"></p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section notes-archive-section" id="arsip">
+      <div class="container">
+        <div class="archive-intro">
+          <h2>Arsip</h2>
+          <p>Tempat untuk menyimpan catatan kuliah, dokumentasi praktikum, dan proses pengerjaan proyek.</p>
+        </div>
+        <div class="notes-archive-list" aria-label="Kategori arsip">
+          <details class="archive-timeline-entry">
+            <summary><span>01</span><h3>Catatan belajar</h3><b aria-hidden="true">+</b></summary>
+            <p>Rangkuman materi perkuliahan.</p>
+          </details>
+          <details class="archive-timeline-entry">
+            <summary><span>02</span><h3>Praktikum</h3><b aria-hidden="true">+</b></summary>
+            <p>Dokumentasi praktikum.</p>
+          </details>
+          <details class="archive-timeline-entry">
+            <summary><span>03</span><h3>Proses proyek</h3><b aria-hidden="true">+</b></summary>
+            <p>Catatan selama mengerjakan proyek.</p>
+          </details>
+          <details class="archive-timeline-entry">
+            <summary><span>04</span><h3>Eksperimen teknologi</h3><b aria-hidden="true">+</b></summary>
+            <p>Hal yang sedang dipelajari dan dicoba.</p>
+          </details>
+        </div>
+        <p class="archive-empty-note">Belum ada catatan arsip yang ditambahkan.</p>
+        <a class="text-link archive-hub-link" href="#academic-hub">Lihat tugas kuliah <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="contact-section" id="kontak">
+      <div class="container contact-inner"><p class="eyebrow">Kontak</p><h2>Hubungi saya.</h2><p>Silakan hubungi saya melalui akun berikut.</p>
+        <div class="social-links" aria-label="Media sosial">
+          <a class="social-link" href="https://www.instagram.com/irh4mni_?srtk=NGFtNDY5MmtuaXBv&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Kunjungi Instagram Muhammad Irhamni">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="social-icon-dot" cx="17.5" cy="6.5" r="1"></circle></svg>
+            <span>Instagram</span>
+          </a>
+          <a class="social-link" href="https://www.tiktok.com/@kotoranbadak?_r=1&amp;_t=ZS-9AzT7QnpJkV" target="_blank" rel="noopener noreferrer" aria-label="Kunjungi TikTok Muhammad Irhamni">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 8.2a7.3 7.3 0 0 1-4.3-1.4v7.1a5.8 5.8 0 1 1-5-5.7v3.7a2.2 2.2 0 1 0 1.4 2V2.5h3.6a4.9 4.9 0 0 0 4.3 4.3v1.4Z"></path></svg>
+            <span>TikTok</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><a class="brand" href="#beranda">MI<span></span></a><p>© <span id="year"></span> Muhammad Irhamni</p><a href="#beranda">Kembali ke atas ↑</a></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
